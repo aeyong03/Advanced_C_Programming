@@ -2,19 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 
+char *my_strcpy(char *q)
+{
+    char*p;
+    int i = 0;
+    while (q[i] != '\0')
+    {
+        p[i] = q[i];
+        i++;
+    }
+    p[i] = '\0';
+    return p;
+}
+
 int main()
 {
-    char **ptr = (char **)malloc(sizeof(char*) * 3 + 1);
-    ptr[0] = "Hi";
-    ptr[1] = "HELLO";
-    ptr[2] = "안 녕";
-    for (int i = 0; i < 3; i++)
-    {
-        int size = (int)strlen(ptr[i]);
-        ptr[i][size ] = '\0';
-        printf("%s\n", ptr[i]);
-        free(ptr[i]);
-    }
-    free(ptr);
+    
+    char *q;
+    q = "Hello";
+    printf("%s\n", my_strcpy(q));
     return 0;
+    
 }
