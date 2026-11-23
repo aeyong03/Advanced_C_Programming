@@ -1,0 +1,51 @@
+Book_Name		Count
+A_Clockwork_Orange	100
+A_Passage_to_India	100
+Agnes_Grey	100
+Alice's_Adventures_in_Wonderland	100
+Anna_Karenina	100
+Around_the_World_in_Eighty_Days	100
+Be Your Future Self Now	100
+Bricks Reading	97
+C Express	100
+C language understanding	100
+C programming	100
+Catch-22	100
+Computer Architecture	97
+Computer Netwoking	97
+Crime_and_Punishment	100
+Cranford	100
+David_Copperfield	100
+Death_in_Venice	100
+Don_Quixote	100
+Dracula	100
+Empire of The Ants	97
+Emma	100
+Fahrenheit_451	100
+Frankenstein	100
+Future Self	100
+Gulliver's_Travels	100
+Hamlet	100
+Harry Potter	97
+Heart_of_Darkness	100
+Invisible_Man	100
+Jane_Eyre	100
+Les_Misérables	100
+Little_Women	100
+Lord_Jim	100
+Macbeth	100
+Madame_Bovary	100
+Mansfield_Park	100
+Middlemarch	100
+Moby-Dick	100
+North_and_South	100
+Northanger_Abbey	100
+Numerical Analysis	100
+Oliver_Twist	100
+Operating Systems	100
+Persuasion	100
+Pride_and_Prejudice	100
+Principle of Physics	97
+PYTHON : PROGRAMMING IN CONTEXT	97
+Robinson_Crusoe	100
+Sense_and_Sensibility	100

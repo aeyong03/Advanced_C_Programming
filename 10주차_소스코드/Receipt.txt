@@ -1,0 +1,6 @@
+Receipt
+
+espresso             1   0.99
+Tiramisu             1   6.99
+
+Total ::                 7.98
