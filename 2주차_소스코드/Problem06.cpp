@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void input_char(char str[], char order[]) {
+void input_char(char str[], char order[])
+{
 
     printf("정렬할 문자열을 입력하세요: ");
     scanf("%s", str);
@@ -11,14 +12,19 @@ void input_char(char str[], char order[]) {
     scanf("%s", order);
 }
 
-void func_sort(char str[], char order[]) {
+void func_sort(char str[], char order[])
+{
     int len = strlen(str);
     char temp;
 
-    if (strcmp(order, "오름차순") == 0) {
-        for (int i = 0; i < len - 1; i++) {
-            for (int j = i + 1; j < len; j++) {
-                if (str[i] > str[j]) {
+    if (strcmp(order, "오름차순") == 0)
+    {
+        for (int i = 0; i < len - 1; i++)
+        {
+            for (int j = i + 1; j < len; j++)
+            {
+                if (str[i] > str[j])
+                {
                     temp = str[i];
                     str[i] = str[j];
                     str[j] = temp;
@@ -27,10 +33,14 @@ void func_sort(char str[], char order[]) {
         }
     }
 
-    else if (strcmp(order, "내림차순") == 0) {
-        for (int i = 0; i < len - 1; i++) {
-            for (int j = i + 1; j < len; j++) {
-                if (str[i] < str[j]) {
+    else if (strcmp(order, "내림차순") == 0)
+    {
+        for (int i = 0; i < len - 1; i++)
+        {
+            for (int j = i + 1; j < len; j++)
+            {
+                if (str[i] < str[j])
+                {
                     temp = str[i];
                     str[i] = str[j];
                     str[j] = temp;
@@ -40,11 +50,13 @@ void func_sort(char str[], char order[]) {
     }
 }
 
-void func_print(char str[]) {
+void func_print(char str[])
+{
     printf("정렬 결과: %s\n", str);
 }
 
-int main() {
+int main()
+{
     char str[100];
     char order[20];
 

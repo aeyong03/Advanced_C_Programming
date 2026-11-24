@@ -1,46 +1,49 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-
-
 char VIP[4] = "VIP";
 char Standard[10] = "Standard";
 
+int room_VIP[3] = {0, 0, 0};
+int room_Standard[5] = {0, 0, 0, 0, 0};
 
-int room_VIP[3] = { 0, 0, 0 };
-int room_Standard[5] = { 0, 0, 0, 0, 0 };
-
-
-
-
-int my_strcmp(char* arr1, char* arr2) {
+int my_strcmp(char *arr1, char *arr2)
+{
 
 	int i = 0;
 
-	while (*(arr1 + i) != '\0' && *(arr1 + i) == *(arr2 + i)) {
+	while (*(arr1 + i) != '\0' && *(arr1 + i) == *(arr2 + i))
+	{
 		i++;
 	}
 
-	if (*(arr1 + i) > *(arr2 + i)) {
+	if (*(arr1 + i) > *(arr2 + i))
+	{
 		return 1;
 	}
-	else if (*(arr1 + i) < *(arr2 + i)) {
+	else if (*(arr1 + i) < *(arr2 + i))
+	{
 		return -1;
 	}
-	else {
+	else
+	{
 		return 0;
 	}
 }
 
-int VIP_check(int member) {
+int VIP_check(int member)
+{
 
-	if (member > 4) {
+	if (member > 4)
+	{
 		return -1;
 	}
 
-	int* p = room_VIP;
-	for (int i = 0; i < 3; i++) {
-		if (*p == 0) {
+	int *p = room_VIP;
+	for (int i = 0; i < 3; i++)
+	{
+		if (*p == 0)
+		{
 			*p = 1;
 			return 301 + i;
 		}
@@ -50,15 +53,19 @@ int VIP_check(int member) {
 	return -1;
 }
 
-int Standard_check(int member) {
+int Standard_check(int member)
+{
 
-	if (member > 2) {
+	if (member > 2)
+	{
 		return -1;
 	}
 
-	int* p = room_Standard;
-	for (int i = 0; i < 5; i++) {
-		if (*p == 0) {
+	int *p = room_Standard;
+	for (int i = 0; i < 5; i++)
+	{
+		if (*p == 0)
+		{
 			*p = 1;
 			return 201 + i;
 		}
@@ -68,39 +75,43 @@ int Standard_check(int member) {
 	return -1;
 }
 
-int reservation(int member, char* type) {
+int reservation(int member, char *type)
+{
 
-	if (my_strcmp(type, VIP) == 0) {
+	if (my_strcmp(type, VIP) == 0)
+	{
 		return VIP_check(member);
 	}
-	else if (my_strcmp(type, Standard) == 0) {
+	else if (my_strcmp(type, Standard) == 0)
+	{
 		return Standard_check(member);
 	}
 	return -1;
 }
 
-int main() {
+int main()
+{
 	int member;
 	char type[10];
 
-	for (int i = 0; i < 5; i++) {
-		printf("\n¿¹¾à ÀÎ¿ø ÀÔ·Â : ");
+	for (int i = 0; i < 5; i++)
+	{
+		printf("\nï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ ï¿½Ô·ï¿½ : ");
 		scanf("%d", &member);
-		printf("°´½Ç Å¸ÀÔ ÀÔ·Â(VIP / Standard) : ");
+		printf("ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½Ô·ï¿½(VIP / Standard) : ");
 		scanf("%s", type);
 
 		int room_num = reservation(member, type);
 
-		if (room_num != -1) {
-			printf("¿¹¾à ¿Ï·á : %dÈ£\n", room_num);
+		if (room_num != -1)
+		{
+			printf("ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ : %dÈ£\n", room_num);
 		}
-		else {
-			printf("¿¹¾à ºÒ°¡\n");
+		else
+		{
+			printf("ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½\n");
 		}
 	}
 
 	return 0;
-
-
-
 }

@@ -1,10 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void x_symmetry(int x, int y) {
+void x_symmetry(int x, int y)
+{
 	char arr[4][4];
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			arr[i][j] = 'O';
 		}
 	}
@@ -14,19 +17,24 @@ void x_symmetry(int x, int y) {
 	int col = (x < 0) ? (x + 2) : (x + 1);
 	arr[row][col] = 'X';
 
-	printf("\nxÃà ´ëÄª °á°ú:\n");
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	printf("\nxï¿½ï¿½ ï¿½ï¿½Äª ï¿½ï¿½ï¿?:\n");
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			printf("%c", arr[i][j]);
 		}
 		printf("\n");
 	}
 }
 
-void y_symmetry(int x, int y) {
+void y_symmetry(int x, int y)
+{
 	char arr[4][4];
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			arr[i][j] = 'O';
 		}
 	}
@@ -36,19 +44,24 @@ void y_symmetry(int x, int y) {
 	int col = (x < 0) ? (x + 2) : (x + 1);
 	arr[row][col] = 'X';
 
-	printf("\nyÃà ´ëÄª °á°ú:\n");
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	printf("\nyï¿½ï¿½ ï¿½ï¿½Äª ï¿½ï¿½ï¿?:\n");
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			printf("%c", arr[i][j]);
 		}
 		printf("\n");
 	}
 }
 
-void origin_symmetry(int x, int y) {
+void origin_symmetry(int x, int y)
+{
 	char arr[4][4];
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			arr[i][j] = 'O';
 		}
 	}
@@ -59,27 +72,32 @@ void origin_symmetry(int x, int y) {
 	int col = (x < 0) ? (x + 2) : (x + 1);
 	arr[row][col] = 'X';
 
-	printf("\n¿øÁ¡ ´ëÄª °á°ú:\n");
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	printf("\nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äª ï¿½ï¿½ï¿?:\n");
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			printf("%c", arr[i][j]);
 		}
 		printf("\n");
 	}
 }
 
-int main() {
+int main()
+{
 
 	char arr[4][4];
 
 	int x, y = 0;
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			arr[i][j] = 'O';
 		}
 	}
-	printf("'X'·Î Ç¥½ÃÇÒ ÁÂÇ¥ ÀÔ·Â : ");
+	printf("'X'ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¥ ï¿½Ô·ï¿½ : ");
 	scanf("%d %d", &x, &y);
 
 	int row = (y > 0) ? (2 - y) : (1 - y);
@@ -87,9 +105,11 @@ int main() {
 
 	arr[row][col] = 'X';
 
-	printf("\nÀÔ·Â°ª ¹Ý¿µ ÁÂÇ¥Æò¸é:\n");
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	printf("\nï¿½Ô·Â°ï¿½ ï¿½Ý¿ï¿½ ï¿½ï¿½Ç¥ï¿½ï¿½ï¿?:\n");
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
 			printf("%c", arr[i][j]);
 		}
 		printf("\n");

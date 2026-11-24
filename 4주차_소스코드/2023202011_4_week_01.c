@@ -3,21 +3,24 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-int main() {
+int main()
+{
 	int cnd, sum = 0;
-	int* p;
+	int *p;
 	printf("입력할 갯수는 ? : ");
 	scanf("%d", &cnd);
 
-	p = (int*)malloc(sizeof(int) * cnd);
+	p = (int *)malloc(sizeof(int) * cnd);
 
-	for (int i = 0; i < cnd; i++) {
+	for (int i = 0; i < cnd; i++)
+	{
 		printf("%d번째 숫자 : ", i + 1);
 		scanf("%d", (p + i));
 	}
-	for (int i = 0; i < cnd; i++) {
-		if (*(p + i) % 2 == 0 ) {
+	for (int i = 0; i < cnd; i++)
+	{
+		if (*(p + i) % 2 == 0)
+		{
 			sum += *(p + i);
 		}
 	}
