@@ -1,34 +1,25 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
-    FILE *src = fopen("src.txt", "rt");
-    FILE *des = fopen("dst.txt", "wt");
-    int ch;
+    long fpos;
+    int i;
 
-    if (src == NULL || des == NULL)
+    FILE *fp = fopen("test.txt", "wt");
+    fputs("1234-", fp);
+    fclose(fp);
+
+    fp = fopen("test.txt", "rt");
+
+    for (int i = 0; i < 4; i++)
     {
-        puts("FUCK!!");
-        return -1;
+        putchar(fgetc(fp));
+        fpos = ftell(fp); // 1부터 시작
+        fseek(fp, -1, SEEK_END);
+        putchar(fgetc(fp)); //-출력
+        fseek(fp, fpos, SEEK_SET);
     }
 
-    while ((ch = fgetc(src)) != EOF)
-    {
-        fputc(ch, des);
-    }
-
-    if (feof(src) != 0)
-    {
-        puts("YES!!");
-    }
-    else
-    {
-        puts("FUCK!!");
-    }
-
-    fclose(src);
-    fclose(des);
-
+    fclose(fp);
     return 0;
 }
