@@ -1,10 +1,14 @@
-1	scone : 2500
-2	vailla_latte : 2500
-3	americano : 1500
-4	iced_americano : 1500
-5	mocha_latte : 2500
-6	cappuccino : 2500
-7	espresso : 500
-8	straberry_milk : 1000
-9	strawberry_ade : 2500
-결제금액 : 17000
+Your choice menu
+
+scone
+vailla_latte
+americano
+iced_americano
+mocha_latte
+cappuccino
+espresso
+straberry_milk
+strawberry_ade
+
+
+show me the money : 17000
